@@ -80,6 +80,7 @@ router.get(
 		const comment = await Comment.findOne({
 			where: {
 				id: commentId,
+				userId,
 			},
 			include: [User, Post, Like],
 		});

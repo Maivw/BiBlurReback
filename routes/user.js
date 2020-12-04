@@ -139,7 +139,6 @@ router.put(
 	upload.single("imageUrl"),
 	asyncHandler(async (req, res, next) => {
 		const userId = req.user.id;
-		console.log("llll", userId);
 		const { username, imageUrl } = req.body;
 		const user = await User.findByPk(userId);
 		const isFile = _.get(req, "file.path", ""); // {res: {file {path : 'upload/file_name.png'}}}

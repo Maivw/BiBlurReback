@@ -54,8 +54,6 @@ router.post(
 			imagePostUrl,
 			userId,
 		} = req.body;
-
-		console.log("KKKKKK");
 		const isFile = _.get(req, "file.path", ""); // {res: {file {path : 'upload/file_name.png'}}}
 		const formatUrlFile = isFile
 			? `${process.env.URL}/${isFile}`

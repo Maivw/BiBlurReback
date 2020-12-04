@@ -14,7 +14,6 @@ router.get(
 			where: { id: userId },
 			include: { model: User, as: "myFollowers" },
 		});
-		console.log("CHECK FOLLOWERS", user.myFollowers);
 		res.json({ user });
 	})
 );
@@ -27,7 +26,6 @@ router.get(
 			where: { id: userId },
 			include: { model: User, as: "following" },
 		});
-		console.log("CHECK FOLLOWERS", user.following);
 		res.json({ user });
 	})
 );
